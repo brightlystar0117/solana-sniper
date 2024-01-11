@@ -7,9 +7,12 @@ birdeye_api =  config.get("BIRDEYE", "API")
 
 """I modified it to dexscreener, forgot to change the filename"""
 def getBaseToken(token_address):
-    url =  f"https://api.dexscreener.com/latest/dex/pairs/solana/{token_address}"
-    response = requests.get(url).json()
-    return response['pair']['baseToken']['address']
+    try:
+        url =  f"https://api.dexscreener.com/latest/dex/pairs/solana/{token_address}"
+        response = requests.get(url).json()
+        return response['pair']['baseToken']['address']
+    except:
+        return token_address
 
 """
 USDT and USDC prices will be excluded
@@ -69,3 +72,4 @@ def getSymbol(token):
             return "USDC", "SOL"
         elif token == 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v':
             return "USDT", "SOL"
+
