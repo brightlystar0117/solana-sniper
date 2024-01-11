@@ -26,10 +26,9 @@ To use the Solana Sniper, you will need the following:
 
 ## Contact
 
-For any business inquiries, please reach out to us:
-
-- Discord: `kokiez4000`
+For any business inquiries, please reach out at:
 - Telegram: `kokiez4000`
+
 
 Happy trading with the Solana Sniper!
 
