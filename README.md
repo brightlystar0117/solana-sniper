@@ -26,7 +26,7 @@ To use the Solana Sniper, you will need the following:
 
 ## Contact
 
-For any business inquiries or support, please reach out to us:
+For any business inquiries, please reach out to us:
 
 - Discord: `kokiez4000`
 - Telegram: `kokiez4000`
