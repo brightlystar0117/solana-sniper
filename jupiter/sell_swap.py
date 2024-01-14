@@ -133,7 +133,7 @@ def sell(ctx, payer, TOKEN_TO_SWAP_SELL, config):
                 
         except RPCException as e:
             print(f"Error: [{e.args[0].message}]...\nRetrying...")
-            sendWebhook(f"e|SELL ERROR {token_symbol}",f"{e.args[0].message}")
+            sendWebhook(f"e|SELL ERROR {token_symbol}",f"{e.args[0].data.logs}")
             # txnBool = False
             # return "failed"
         except Exception as e:
