@@ -114,7 +114,7 @@ def buy(payer, ctx, amount_of_sol_to_swap, TOKEN_TO_SWAP_BUY, config):
         
         except RPCException as e:
             print(f"Error: [{e.args[0].message}]...\nRetrying...")
-            sendWebhook(f"e|BUY ERROR {token_symbol}",f"{e.args[0].message}")
+            sendWebhook(f"e|BUY ERROR {token_symbol}",f"{e.args[0].data.logs}")
             time.sleep(1)
             # txnBool = False
             # return "failed"
