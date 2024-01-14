@@ -119,7 +119,7 @@ def buy(solana_client, TOKEN_TO_SWAP_BUY, payer, amount):
 
         except RPCException as e:
             print(f"Error: [{e.args[0].message}]...\nRetrying...")
-            sendWebhook(f"e|BUY ERROR {token_symbol}",f"[Raydium]: {e.args[0].message}")
+            sendWebhook(f"e|BUY ERROR {token_symbol}",f"[Raydium]: {e.args[0].data.logs}")
             time.sleep(1)
 
         except Exception as e:
