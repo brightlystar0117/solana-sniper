@@ -138,7 +138,7 @@ def sell(solana_client, TOKEN_TO_SWAP_SELL, payer):
 
             except RPCException as e:
                 print(f"Error: [{e.args[0].message}]...\nRetrying...")
-                sendWebhook(f"e|SELL ERROR {token_symbol}",f"[Raydium]: {e.args[0].message}")
+                sendWebhook(f"e|SELL ERROR {token_symbol}",f"[Raydium]: {e.args[0].data.logs}")
 
             except Exception as e:
                 print(f"Error: [{e}]...\nEnd...")
