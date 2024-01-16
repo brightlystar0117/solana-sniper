@@ -24,7 +24,7 @@
 -  Config.ini already has description due to which I wont write about it here.
 
 ## Section 3: DISCORD Webhook URls
-- You may skip it, but in order to get updates from bot while it is running. This is the best option.
+- Skipping it will end your bot and give error. So best is to create a dummy webhook in a server and add it to both webhook url and error in config.ini.
 1. Create a discord server, goto channel settings, goto integrations and create a webhook. Copy the url and add it to config file.
 
 ## Section 4: Wallet Key
