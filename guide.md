@@ -37,7 +37,8 @@
 1. Goto alchemy and create your endpoint for solana. Copy the https url and add it to config.ini
 
 ## Finally
-1. You can create a test channel and add the username to config.ini to test the bot.
+1. You can create a test channel using main telegram account, then join it with the one that is suppose to be in the solana sniper bot, and then add the username to config.ini.
+      - **Note**: some users faced issues e.g. when they send a message in the channel from the telegram account in bot, it does not show up. But if the message is sent by someone else in the channel, it does work.
 2. Run `python main.py`.
 3. It will display **Message Received** if telethon is working and CA will show up if the **senderusernames are correct**.
 
