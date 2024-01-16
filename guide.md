@@ -7,6 +7,7 @@
 
 ## Chapter 2: Config file.
 ### Section 1: Telegram.
+**Note:** Use a temporary number telegram account as use of telethon is subject to ban.
 1. Go to [Telegram API development tools](https://my.telegram.org/auth?to=apps).
 2. Enter your number, you will receive the code in your telegram application. Enter code and press next.
 3. Fill out the form as follows:
@@ -39,6 +40,7 @@
 ## Finally
 1. You can create a test channel using main telegram account, then join it with the one that is suppose to be in the solana sniper bot, and then add the username to config.ini.
       - **Note**: some users faced issues e.g. when they send a message in the channel from the telegram account in bot, it does not show up. But if the message is sent by someone else in the channel, it does work.
+      - **Detailed Note Example:** my main tg is kokiez4000, I created a second tg with the username kokiezTest and used a temporary number. I setup api settings for kokiezTest, then created a channel using kokiez4000             and added kokiezTest to the channel. When I send message in channel from kokiezTest, it will not show up in bot but if I send message from kokiez4000 in channel, it will work...
 2. Run `python main.py`.
 3. It will display **Message Received** if telethon is working and CA will show up if the **senderusernames are correct**.
 
