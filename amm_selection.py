@@ -156,7 +156,7 @@ def select_amm2trade(token_address,payer, ctx, event_thread):
                     # Save the settings into a file
                     storeSettings("Raydium",
                     desired_token_address,
-                    txB,
+                    txB_R,
                     execution_time,
                     limit_order_sell_Bool,
                     take_profit_ratio,
