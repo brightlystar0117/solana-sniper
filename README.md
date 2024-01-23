@@ -30,7 +30,7 @@ For any business inquiries, please reach out at:
 - Telegram: `kokiez4000`
 
 For Discussions and Services:
-- Discord Server: https://discord.gg/ThAb4QCV
+- Discord Server: [https://discord.gg/ThAb4QCV](https://discord.gg/z5cMem9MCW)
 
 Happy trading with the Solana Sniper!
 
