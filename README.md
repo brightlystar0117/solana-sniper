@@ -18,6 +18,7 @@ To use the Solana Sniper, you will need the following:
 - Discord Webhook urls.
 - Telegram bot api keys.
 - Solana RPC Provider's HTTPS URL
+- Kokiez API key
 
 ## Getting Started
 
