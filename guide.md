@@ -35,7 +35,7 @@
 I created an api, so everyone can fetch pool info at much faster rate. You can text me on telegram to get a trial of the API (API is limited to 30 Requests per minute):
 - Pricing:
 
-      1) 10$ per 5 days 
+      1) 10$ for 5 days 
       2) 30$ for a month
 
 ## Section 7: RPC URL
