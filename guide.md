@@ -7,7 +7,7 @@
 
 ## Chapter 2: Config file.
 ### Section 1: Telegram.
-**Note:** Use a temporary number for telegram account as use of telethon is subject to ban.
+**Note:** Use a temporary number for telegram account as use of telethon is subject to ban. You can use sms-man to get a number and use an android emulator or vpn while activating the number to avoid instant ban.
 1. Go to [Telegram API development tools](https://my.telegram.org/auth?to=apps).
 2. Enter your number, you will receive the code in your telegram application. Enter code and press next.
 3. Fill out the form as follows:
