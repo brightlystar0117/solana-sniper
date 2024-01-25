@@ -5,9 +5,9 @@ from solders.signature import Signature
 
 from solana.rpc.api import RPCException
 
-from webhook import sendWebhook
-from checkBalance import checkB
-from birdeye import getSymbol
+from utils.webhook import sendWebhook
+from utils.checkBalance import checkB
+from utils.birdeye import getSymbol
 
 
 LAMPORTS_PER_SOL = 1000000000
@@ -16,7 +16,7 @@ def buy(payer, ctx, amount_of_sol_to_swap, TOKEN_TO_SWAP_BUY, config):
 
     slippageBps = int(config.get("INVESTMENT", "slippage"))
     computeUnitPriceMicroLamports = int(config.get("INVESTMENT", "computeUnitPriceMicroLamports"))
-    RPC_HTTPS_URL = config.get("INFURA_URL", "infuraURL")
+    RPC_HTTPS_URL = config.get("RPC_URL", "rpc_url")
 
 
     txnBool = True
@@ -108,8 +108,7 @@ def buy(payer, ctx, amount_of_sol_to_swap, TOKEN_TO_SWAP_BUY, config):
 
                 except Exception as e:
                     sendWebhook(f"e|BUY ERROR {token_symbol}",f"{e}")
-                    time.sleep(2)
-                    print("Sleeping...")
+                    print("Retrying...")
             
         
         except RPCException as e:

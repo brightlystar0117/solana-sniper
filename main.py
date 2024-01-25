@@ -15,15 +15,18 @@ from solana.rpc.commitment import Commitment
 from configparser import ConfigParser
 from threading import Thread, Event
 
-from birdeye import getSymbol, getBaseToken
+from utils.birdeye import getSymbol, getBaseToken
 
 # Pakages for Telegram
 from telethon import TelegramClient, events, errors
 
 # Other Methods created
 from amm_selection import select_amm2trade
-from webhook import sendWebhook
+from utils.new_pools_list import add
+from utils.webhook import sendWebhook
 from loadkey import load_keypair_from_file
+from raydium.new_pool_address_identifier import get_pair_address_new_pool
+
 import threading
 # ------------------------ ------------------------ ------------------------
 #  INTIALIZING VARIABLES
@@ -52,12 +55,16 @@ senderUserNames = senderUserNames_to_monitor.split(',')
 session_name = config.get("TELEGRAM", "session_name")
 api_id = config.getint("TELEGRAM", "API_ID")
 api_hash = config.get("TELEGRAM", "API_HASH")
+NEW_POOL = config.getboolean("JUPITER", "NEW_POOL")
+
 birdeye_pattern = r'https?://birdeye\.so/token/(\w+)\?chain=solana'
 dexscreener_pattern = r'https://dexscreener\.com/solana/(\w+)'
 CA_pattern = r'[1-9A-HJ-NP-Za-km-z]{32,44}'
+new_pool_tx_pattern = r"https://solscan\.io/tx/(\w+)"
+
 
 # Infura settings - register at infura and get your mainnet url.
-RPC_HTTPS_URL = config.get("INFURA_URL", "infuraURL")
+RPC_HTTPS_URL = config.get("RPC_URL", "rpc_url")
 
 # Wallets private key
 private_key = config.get("WALLET", "private_key")
@@ -81,7 +88,7 @@ event_thread = Event()
 # ------------------------ ------------------------ ------------------------
 
 # Load Previous Coins: ---------------------------
-file_path = os.path.join(sys.path[0], 'data', 'previousSELLBUYINFO.json')
+file_path = os.path.join(sys.path[0], 'data', 'bought_tokens_info.json')
 
 # Load the JSON file
 with open(file_path, 'r') as file:
@@ -109,6 +116,7 @@ def print_message(message):
 
 def logging_info(token_address, author, channel_id, message_recieved):
     token_symbol, SOl_Symbol = getSymbol(token_address)
+
     if SOl_Symbol == "SOL":
         logging.info(f"Message received {token_symbol} --->\n"
                      f"Username:{author}\nChannel:{channel_id}\n"
@@ -152,28 +160,43 @@ def Telegram():
                 sender_username = event.message._sender.username
                 for user in senderUserNames:
                     if user == sender_username:
-                        message_recieved = event.message.message
-                        if message_recieved != '' and message_recieved is not None:
-                            chat_id = event.chat_id
-                            channel_id = event.message._chat_peer.channel_id
-                            sender_id = event.message.sender_id
-                            author = sender_username
+                            if NEW_POOL:
+                                message_recieved = event.message.text
+                            else:
+                                message_recieved = event.message.message
 
-                            dex_url = re.search(
-                                dexscreener_pattern, message_recieved)
-                            birdeye_url = re.search(
-                                birdeye_pattern, message_recieved)
-                            alphanumeric_ca = re.search(
-                                CA_pattern, message_recieved)
-                            if dex_url:
-                                token_address = getBaseToken(dex_url.group(1))
-                            elif birdeye_url:
-                                token_address = getBaseToken(
-                                    birdeye_url.group(1))
-                            elif alphanumeric_ca:
-                                token_address = alphanumeric_ca.group(0)
-                            logging_info(token_address, author,
-                                         channel_id, message_recieved)
+
+                            if message_recieved != '' and message_recieved is not None:
+                                chat_id = event.chat_id
+                                channel_id = event.message._chat_peer.channel_id
+                                sender_id = event.message.sender_id
+                                author = sender_username
+
+
+                                solscan_url = re.search(
+                                    new_pool_tx_pattern, message_recieved)
+                                dex_url = re.search(
+                                    dexscreener_pattern, message_recieved)
+                                birdeye_url = re.search(
+                                    birdeye_pattern, message_recieved)
+                                alphanumeric_ca = re.search(
+                                    CA_pattern, message_recieved)
+                                
+
+                                if solscan_url and "new pool" in str(message_recieved).lower():
+                                    txn = solscan_url.group(1)
+                                    token_address = get_pair_address_new_pool(ctx,txn)
+                                    if  token_address!= False:
+                                        add(token_address)
+                                elif dex_url:
+                                    token_address = getBaseToken(dex_url.group(1))
+                                elif birdeye_url:
+                                    token_address = getBaseToken(
+                                        birdeye_url.group(1))
+                                elif alphanumeric_ca:
+                                    token_address = alphanumeric_ca.group(0)
+                                logging_info(token_address, author,
+                                            channel_id, message_recieved)
 
         client.run_until_disconnected()
 

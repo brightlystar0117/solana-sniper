@@ -9,20 +9,17 @@ from solana.rpc.api import RPCException
 from solders.pubkey import Pubkey
 from solana.rpc.types import TokenAccountOpts
 
-from webhook import sendWebhook
-from birdeye import getSymbol
+from utils.webhook import sendWebhook
+from utils.birdeye import getSymbol
+from utils.constants import LAMPORTS_PER_SOL
 
-
-TOKEN_PROGRAM_ID = 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'
-LAMPORTS_PER_SOL = 1000000000
 
 def sell(ctx, payer, TOKEN_TO_SWAP_SELL, config):
-    token_symbol, SOl_Symbol = getSymbol(TOKEN_TO_SWAP_SELL)
+    token_symbol, _ = getSymbol(TOKEN_TO_SWAP_SELL)
 
     slippageBps = int(config.get("INVESTMENT", "slippage"))
     computeUnitPriceMicroLamports = int(config.get("INVESTMENT", "computeUnitPriceMicroLamports"))
 
-    RPC_HTTPS_URL = config.get("INFURA_URL", "infuraURL")
 
     txnBool = True
     while txnBool:
@@ -126,8 +123,7 @@ def sell(ctx, payer, TOKEN_TO_SWAP_SELL, config):
                         checkTxn = False
                 except Exception as e:
                     sendWebhook(f"e|Sell ERROR {token_symbol}",f"{e}")
-                    time.sleep(2)
-                    print("Sleeping...")
+                    print("Retrying...")
 
             
                 

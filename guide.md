@@ -20,27 +20,31 @@
 6. **Sender Username**, it is the username of channels from where you will receive. Note that the sender in the channel is most likely having the same username as channel username. An example is given below:
 ![Example1](https://i.ibb.co/Cvqtbhx/Screenshot-2024-01-02-233151.png)
 
-## Section 2: Investment
+## Section 2 and 3:
 -  Config.ini already has description due to which I wont write about it here.
 
-## Section 3: DISCORD Webhook URls
+## Section 4: DISCORD Webhook URls
 - Skipping it will end your bot and give error. So best is to create a dummy webhook in a server and add it to both webhook url and error in config.ini.
 1. Create a discord server, goto channel settings, goto integrations and create a webhook. Copy the url and add it to config file.
 
-## Section 4: Wallet Key
+## Section 5: Wallet Key
 - Every wallet has different settings. With intention of testing this bot, you must already have this information.
 - But when you get the key, it may look something like this `asuhduiahsw812y98dajsdui172yashduiahsuidh11sjhdahduiashduh1892hdhsuahdh199d89hashANDSO1ON`
 
-## Section 4: Birdeye
-**Skip**
+## Section 6: kokiez_api
+I created an api, so everyone can fetch pool info at much faster rate. You can text me on tg to get a trial of the API (API is limited to 30 Requests per minute):
+- Pricing:
 
-## Section 5: INFURA URL
-1. Goto alchemy and create your endpoint for solana. Copy the https url and add it to config.ini
+      1) 10$ per 5 days 
+      2) 30$ for a month
+
+## Section 7: RPC URL
+1. Goto [helius](https://helius.xyz/) and create your endpoint for solana. Copy the https url and add it to config.ini
 
 ## Finally
-1. You can create a test channel using main telegram account, then join it with the one that is suppose to be in the solana sniper bot, and then add the username to config.ini.
+1. You can create a test channel using main telegram account, then join it with the one that is suppose to be in the solana sniper bot, and then add the username of channel to config.ini.
       - **Note**: some users faced issues e.g. when they send a message in the channel from the telegram account in bot, it does not show up. But if the message is sent by someone else in the channel, it does work.
-      - **Detailed Note Example:** my main tg is kokiez4000, I created a second tg with the username kokiezTest and used a temporary number. I setup api settings for kokiezTest, then created a channel using kokiez4000             and added kokiezTest to the channel. When I send message in channel from kokiezTest, it will not show up in bot but if I send message from kokiez4000 in channel, it will work...
+      - **Detailed Note Example:** my main tg is kokiez4000, I created a second tg with the username kokiezTest and used a temporary number. I setup api settings for kokiezTest, then created a channel using kokiez4000 and added kokiezTest to the channel. When I send message in channel from kokiezTest, it will not show up in bot but if I send message from kokiez4000 in channel, it will work...
 2. Run `python main.py`.
 3. It will display **Message Received** if telethon is working and CA will show up if the **senderusernames are correct**.
 
