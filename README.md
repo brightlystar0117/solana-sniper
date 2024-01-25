@@ -1,6 +1,6 @@
 # V2 - Solana Sniper Bot
 
-The Solana Sniper is a powerful Python-based tool designed to automate the process of buying and selling coins on the Solana blockchain. It allows you to set stop loss and limit orders, enabling you to execute trades automatically based on your predefined criteria. The sniper will snipe tokens from telegram channels based on CA or a birdeye url. Raydium has been added too because Jupiter does not support low liquidity coins.
+The Solana Sniper is a powerful Python-based tool designed to automate the process of buying and selling coins on the Solana blockchain. It allows you to set stop loss and limit orders, enabling you to execute trades automatically based on your predefined criteria. The sniper will snipe tokens from telegram channels based on CA or a birdeye url or dexscreener url or solscan/tx/of_a_new_pool. Raydium has been added too because Jupiter does not support low liquidity coins.
 
 ## Whats new ? 
 1) Supports fetching pool info at much faster rate.
