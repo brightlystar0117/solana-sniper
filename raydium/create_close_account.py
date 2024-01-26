@@ -168,7 +168,7 @@ def fetch_pool_keys(mint: str):
             amm_info = requests.get(f'https://www.kokiez.com/api/v1/{pair_address}', headers=headers).json()
 
             if amm_info != None and "error" not in str(amm_info) and "Too Many Requests" not in str(amm_info):
-                print("Total time taken: ",time.time() - a)
+                print("Total time taken to get pool info: ",time.time() - a)
                 storePool_info(mint, amm_info)
                 return {
                     'amm_id': Pubkey.from_string(amm_info['amm_id']),
