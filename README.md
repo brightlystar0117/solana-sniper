@@ -34,6 +34,7 @@ To use the Solana Sniper, you will need the following:
    NEW POOL
    https://solscan.io/tx/5v5BVhWW1rT1sXKvj6i8gRCgSzNLFhEb8tfmKZMUifmFbCLFzfJCnkHgcAwcvCXnizmWMh8cT2WSDV4soJ7Pf5AP
    ```
+  You can use this [channel](https://web.telegram.org/k/#@solanapoolsnew) for getting new pools but remember to change the key word "new pool" in main.py to something that is unique in the new pools channel messages from other channels you follow....
 
 ## Contact
 
