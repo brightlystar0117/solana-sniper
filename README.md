@@ -7,7 +7,7 @@ The Solana Sniper is a powerful Python-based tool designed to automate the proce
 2) Supports sniping new pools (since, it is open source, you all can modify it to your needs e.g. snipe from tg or discord or monitor pools in a naive way).
 3) Instead of getting price from dexscreener. It will now calculate how much your token balance is worth in Solana
 4) **Note**: Please keep in mind that if your rpc is good. You defintely will be the first one to buy a coin. I am talking about rented node or private node....
-    - ***If it is your first time on this repo, click on the branch and check out the first-release to get an idea.***
+    - ***If it is your first time on this repo, click on the branch and check out the first-release (FREE VERSION) to get an idea.***
 
 ## Requirements
 
