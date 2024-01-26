@@ -201,7 +201,6 @@ def get_investment_worth(ctx, payer, token_address, tokenBalanceLamports):
         sol = calculateAmountIn(mintBalance, pool_info)
         return sol
     else:
-        # this area commented was initially tested for sol/usdt pair.
         # usdt = calculateAmountIn(mintBalance, pool_info)
 
         # res, quote_type = PoolInfo(
