@@ -201,13 +201,14 @@ def get_investment_worth(ctx, payer, token_address, tokenBalanceLamports):
         sol = calculateAmountIn(mintBalance, pool_info)
         return sol
     else:
-        usdt = calculateAmountIn(mintBalance, pool_info)
+        # this area commented was initially tested for sol/usdt pair.
+        # usdt = calculateAmountIn(mintBalance, pool_info)
 
-        res, quote_type = PoolInfo(
-            "So11111111111111111111111111111111111111112", ctx, payer)
-        pool_info = literal_eval(re.search('({.+})', res).group(0))
+        # res, quote_type = PoolInfo(
+        #     "So11111111111111111111111111111111111111112", ctx, payer)
+        # pool_info = literal_eval(re.search('({.+})', res).group(0))
 
-        sol = calculateAmountOut(usdt, pool_info)
+        sol = calculateAmountOut(mintBalance, pool_info)
 
     return sol
 
