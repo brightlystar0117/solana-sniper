@@ -36,7 +36,7 @@ I created an api, so everyone can fetch pool info at much faster rate. You can t
 - Pricing:
 
       1) 10$ for 5 days 
-      2) 30$ for a month
+      2) 30$ for 30 days
 
 ## Section 7: RPC URL
 1. Goto [helius](https://helius.xyz/) and create your endpoint for solana. Copy the https url and add it to config.ini
