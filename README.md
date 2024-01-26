@@ -30,7 +30,8 @@ To use the Solana Sniper, you will need the following:
     ```
 2. Read it here in detail, [Click me](https://github.com/kokiez/solana-sniper/blob/main/guide.md)
 - Note: Currently, the sniper is set to check for "new pool" and a solscan.com/tx/blabla url in a new message to snipe new pools... but you can change it to your liking. Example:
-   ``` NEW POOL
+   ```
+   NEW POOL
    solscan.com/txt/blablabla
    ```
 
