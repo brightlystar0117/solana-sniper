@@ -51,7 +51,7 @@ def limit_order(ctx,payer,tokenBalanceLamports,desired_token_address, take_profi
 
     sendWebhook(f"msg_b|BUY INFO {token_symbol}",f"Token Amount: {tokenBalanceLamports}\n**Sell Limit Worth: {sell_limit_token_worth:.4f}**\nTotal Buy Execution time: {execution_time:.1f} seconds\nBuy TXN: https://solscan.io/tx/{txB} |")
 
-    # LOOP = CHECK IF PRICE >= SELL LIMIT |  checks price every 5 seconds
+    # LOOP = CHECK IF PRICE >= SELL LIMIT
     priceLow = True
     # while priceLow and isTimePassed(time_limit) == False:
     while priceLow:
@@ -105,7 +105,7 @@ def trailing_stop_loss_func(ctx,payer,tokenBalanceLamports,desired_token_address
                 f"Total Buy Execution time: {execution_time:.1f} seconds\n" \
                 f"Buy TXN: https://solscan.io/tx/{txB} |")
 
-    # LOOP = CHECK IF PRICE >= SELL LIMIT |  checks price every 5 seconds
+    # LOOP = CHECK IF PRICE >= SELL LIMIT 
     priceLow = True
     # while priceLow and isTimePassed(time_limit) == False:
     time.sleep(5)
@@ -192,7 +192,7 @@ def take_profit_and_trailing_stop(ctx,payer,tokenBalanceLamports,desired_token_a
                 f"**Initial Trailing Stop Loss Limit: {initial_trailing_stop_loss_token_price:.4f}**\n\n" \
                 f"Total Buy Execution time: {execution_time:.1f} seconds\nBuy TXN: https://solscan.io/tx/{txB} |")
 
-    # LOOP = CHECK IF PRICE >= SELL LIMIT |  checks price every 5 seconds
+    # LOOP = CHECK IF PRICE >= SELL LIMIT 
     priceLow = True
     # while priceLow and isTimePassed(time_limit) == False:
     time.sleep(5)
