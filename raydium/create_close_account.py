@@ -194,4 +194,4 @@ def fetch_pool_keys(mint: str):
 
 
     except:
-        return None
+        return 'failed'
