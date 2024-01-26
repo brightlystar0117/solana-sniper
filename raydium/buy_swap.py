@@ -118,6 +118,7 @@ def buy(solana_client, TOKEN_TO_SWAP_BUY, payer, amount):
                 sleep_total = open_time - time.time()
                 if sleep_total > EARLY_BUY:
                     sleep_sleep = sleep_total - EARLY_BUY
+                    sendWebhook(f"a|BUY Pool",f"[Raydium]:\nTime Remaining to pool open: {sleep_total} seconds.\nSleep Time: {sleep_sleep} seconds...")
                     print(f"Sleeping for {sleep_sleep}")
                     time.sleep(sleep_sleep)
                     print("sending Buy")
