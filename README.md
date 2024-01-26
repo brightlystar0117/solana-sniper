@@ -32,7 +32,7 @@ To use the Solana Sniper, you will need the following:
 - Note: Currently, the sniper is set to check for "new pool" and a solscan.com/tx/blabla url in a new message to snipe new pools... but you can change it to your liking. Example:
    ```
    NEW POOL
-   solscan.com/txt/blablabla
+   https://solscan.io/tx/5v5BVhWW1rT1sXKvj6i8gRCgSzNLFhEb8tfmKZMUifmFbCLFzfJCnkHgcAwcvCXnizmWMh8cT2WSDV4soJ7Pf5AP
    ```
 
 ## Contact
