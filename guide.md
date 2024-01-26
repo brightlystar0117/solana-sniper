@@ -32,7 +32,7 @@
 - But when you get the key, it may look something like this `asuhduiahsw812y98dajsdui172yashduiahsuidh11sjhdahduiashduh1892hdhsuahdh199d89hashANDSO1ON`
 
 ## Section 6: kokiez_api
-I created an api, so everyone can fetch pool info at much faster rate. You can text me on telegram to get a trial of the API (API is limited to 30 Requests per minute):
+I created an api, so everyone can fetch pool info at much faster rate. You can text me on telegram to get a 5 hours trial of the API (API is limited to 30 Requests per minute). After 2 days of v2 release, I will stop generating trials:
 - Pricing:
 
       1) 10$ for 5 days 
