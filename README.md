@@ -28,7 +28,7 @@ To use the Solana Sniper, you will need the following:
     git clone https://github.com/kokiez/solana-sniper.git
     cd solana-sniper
     ```
-2. Read it here in detail, [Click me](https://github.com/kokiez/solana-sniper/blob/main/guide.md)
+2. Watch the [Video](https://www.youtube.com/watch?v=ZXS4OGUE17k) or Read it here in detail, [Click me](https://github.com/kokiez/solana-sniper/blob/main/guide.md)
 - Note: Currently, the sniper is set to check for "new pool" and a solscan.com/tx/blabla url in a new message to snipe new pools... but you can change it to your liking. Example:
    ```
    NEW POOL
@@ -48,10 +48,7 @@ Happy trading with the Solana Sniper!
 
 ## Proof of its working
 
-**Note**:  Old images, will update them soon.
-
-![1](https://github.com/kokiez/solana-sniper/assets/105941365/2131ce16-1b5c-4cd2-8838-ff0427edbd71)
-![2](https://github.com/kokiez/solana-sniper/assets/105941365/f54fb612-23de-4db1-85f2-39ded1ccc516)
+[Video - Click me](https://youtu.be/ZXS4OGUE17k?t=505)
 
 
 ## Contributors:
