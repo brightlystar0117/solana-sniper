@@ -61,3 +61,6 @@ Happy trading with the Solana Sniper!
 4) [https://github.com/raydium-io/raydium-sdk](https://github.com/raydium-io/raydium-sdk)
 5) [https://github.com/raydium-io/raydium-frontend](https://github.com/raydium-io/raydium-frontend)
 6) [https://github.com/SolanaNatives/Solana-Programming-Resources](https://github.com/SolanaNatives/Solana-Programming-Resources) - Further resources can be found here...
+7) [https://michaelhly.com/solana-py/](https://michaelhly.com/solana-py/)
+8) [https://www.soldev.app/course/intro-to-reading-data](https://www.soldev.app/course/intro-to-reading-data)
+9) [https://kevinheavey.github.io/solders/index.html](https://kevinheavey.github.io/solders/index.html)
