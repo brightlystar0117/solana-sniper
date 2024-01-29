@@ -38,13 +38,8 @@ To use the Solana Sniper, you will need the following:
 
 ## Contact
 
-For API subscription, please reach out at my telegram:
+For Business inquires, please reach out at:
 - Telegram: `kokiez4000`
-
-For any business inquiries (development or help in code), please reach out to v0dium at:
-- Telegram: `v0idum`  (Use my telegram username `kokiez4000` as reference)
-  
-I have decided to stop working on further developments but will continue to provide support for my repositories.
 
 For Discussions and API services (my discord server):
 - Discord Server: [[https://discord.gg/UXpCGW5FqW]](https://discord.gg/UXpCGW5FqW)
