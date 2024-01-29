@@ -45,6 +45,7 @@ For any business inquiries (development or help in code), please reach out to v0
 - Telegram: `v0idum`  (Use my telegram username `kokiez4000` as reference)
   
 I have decided to stop working on further developments but will continue to provide support for my repositories.
+
 For Discussions and API services (my discord server):
 - Discord Server: [[https://discord.gg/UXpCGW5FqW]](https://discord.gg/UXpCGW5FqW)
 
