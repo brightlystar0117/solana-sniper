@@ -55,9 +55,9 @@ Happy trading with the Solana Sniper!
 
 ## References
 
-[https://station.jup.ag/docs/apis/swap-api](https://station.jup.ag/docs/apis/swap-api)
-[Raydium Swap basics](https://github.com/v0idum/solana-swap-arbitrage-bot) - **Note:** His code is pretty old but raydium sdk helped in solving all the errors.
-[https://solanacookbook.com/](https://solanacookbook.com/)
-[https://github.com/raydium-io/raydium-sdk](https://github.com/raydium-io/raydium-sdk)
-[https://github.com/raydium-io/raydium-frontend](https://github.com/raydium-io/raydium-frontend)
-[https://github.com/SolanaNatives/Solana-Programming-Resources](https://github.com/SolanaNatives/Solana-Programming-Resources) - Further resources can be found here...
+1) [https://station.jup.ag/docs/apis/swap-api](https://station.jup.ag/docs/apis/swap-api)
+2) [Raydium Swap basics](https://github.com/v0idum/solana-swap-arbitrage-bot) - **Note:** His code is pretty old but raydium sdk helped in solving all the errors.
+3) [https://solanacookbook.com/](https://solanacookbook.com/)
+4) [https://github.com/raydium-io/raydium-sdk](https://github.com/raydium-io/raydium-sdk)
+5) [https://github.com/raydium-io/raydium-frontend](https://github.com/raydium-io/raydium-frontend)
+6) [https://github.com/SolanaNatives/Solana-Programming-Resources](https://github.com/SolanaNatives/Solana-Programming-Resources) - Further resources can be found here...
