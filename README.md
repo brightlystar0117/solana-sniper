@@ -56,7 +56,7 @@ Happy trading with the Solana Sniper!
 ## References
 
 1) [https://station.jup.ag/docs/apis/swap-api](https://station.jup.ag/docs/apis/swap-api)
-2) [https://github.com/v0idum/solana-swap-arbitrage-bot](https://github.com/v0idum/solana-swap-arbitrage-bot) - Was very useful repo in building the swap info - **Note:** His code is pretty old but raydium sdk helped in solving all the errors.
+2) [https://github.com/v0idum/solana-swap-arbitrage-bot](https://github.com/v0idum/solana-swap-arbitrage-bot) - Was very useful repo in building the swap info - **Note:** His code is pretty old which is not compatible with current solana and solders library due to which it will give errors but raydium sdk helped in solving all the errors.
 3) [https://solanacookbook.com/](https://solanacookbook.com/)
 4) [https://github.com/raydium-io/raydium-sdk](https://github.com/raydium-io/raydium-sdk)
 5) [https://github.com/raydium-io/raydium-frontend](https://github.com/raydium-io/raydium-frontend)
