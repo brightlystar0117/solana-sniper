@@ -50,6 +50,14 @@ Happy trading with the Solana Sniper!
 
 [Video - Click me](https://youtu.be/ZXS4OGUE17k?t=505)
 
-
 ## Contributors:
 - Update CA pattern: [Moka51](https://github.com/Moka51)
+
+## References
+
+[https://station.jup.ag/docs/apis/swap-api](https://station.jup.ag/docs/apis/swap-api)
+[Raydium Swap basics](https://github.com/v0idum/solana-swap-arbitrage-bot) - **Note:** His code is pretty old but raydium sdk helped in solving all the errors.
+[https://solanacookbook.com/](https://solanacookbook.com/)
+[https://github.com/raydium-io/raydium-sdk](https://github.com/raydium-io/raydium-sdk)
+[https://github.com/raydium-io/raydium-frontend](https://github.com/raydium-io/raydium-frontend)
+[https://github.com/SolanaNatives/Solana-Programming-Resources](https://github.com/SolanaNatives/Solana-Programming-Resources) - Further resources can be found here...
