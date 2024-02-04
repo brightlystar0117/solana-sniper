@@ -36,7 +36,7 @@ To use the Solana Sniper, you will need the following:
    ```
   You can use this [channel](https://web.telegram.org/k/#@solanapoolsnew) for getting new pools but remember to change the key word "new pool" in main.py to something that is unique in the new pools channel messages from other channels you follow....
 
-3. **FAQ:** What does the kokiez API do? It returns pool info that you need to swap a token. Example:
+3. **FAQ:** What does the kokiez API do? It returns pool info at hight speed that you need to swap a token. Example:
    ```
    #pair_address or pool id, they are same things
    pair_address = "5DYUboYHHbxmvfZMV7cxYwfXBJH5E2oKgjBpjBHHPMaN"
